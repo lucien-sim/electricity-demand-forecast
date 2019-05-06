@@ -96,7 +96,7 @@ def add_time_feats(obs_df):
 
 def correct_for_climate_change(obs_df,slope):
     corr_obs_df = obs_df.copy()
-    obs_df['air_temp'] = obs_df['air_temp']+slope*(2020-obs_df['year'])
+    corr_obs_df['air_temp'] = corr_obs_df['air_temp']+slope*(2020-corr_obs_df['year'])
     return corr_obs_df
 
 def plot_load_estimations(obs_df): 
